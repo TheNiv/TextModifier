@@ -38,10 +38,6 @@ def removeWhitespace(line):#removes all the white space from a line
         line.remove('')
     return ' '.join(line)
 
-def create_new_line(lines):#yields a line each time
-    for line in lines:
-        yield ' '.join(line)
-
 def main():
     try:
         if stat('Chat.txt').st_size==0:
