@@ -3,7 +3,6 @@ from os import stat
 class EmptyFileError(Exception):
         pass
 
-
 def removeWhitespace(line):
     line=line.split(' ')
     line=list(dict.fromkeys(line))
@@ -14,6 +13,7 @@ def removeWhitespace(line):
 def main():
     CURSES={'green','yellow','orange','blue','white','black','grey','pink','red'}
     SLANGS={'sry':'sorry','pls':'please','u':'you','msg':'message','dw':"don't worry","gl":'good luck'}
+        
     try:
         if stat('Chat.txt').st_size==0:
             raise EmptyFileError
@@ -27,10 +27,12 @@ def main():
                 for word in removeWhitespace(line):#checking words in each line
                     newline=newline+word+' '
                     firstUpper=False
+                        
                     if word[0].isupper():
                         firstUpper=True
                     word=word.lower().strip()
                     word=re.sub('[,?!@#$%^&*()-+=\']','',word)##removing marks from the word string
+                        
                     if word in CURSES :
                         newline=newline.replace(word,len(word)*'#')#replacing the word with '#'
                     elif word in SLANGS:
