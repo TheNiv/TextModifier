@@ -57,16 +57,6 @@ def main():
                 words=line.split(' ')
                 words=list(map(fix,words))
                 line=' '.join(words)
-                newText.write(line)
-            
-                    
-                                      
-                
-                
-                
-                
-            
-    
-    
+                newText.write(line)   
 if __name__ == '__main__':
     main()
