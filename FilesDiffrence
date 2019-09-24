@@ -1,0 +1,4 @@
+TextModifierV2 VS TextModifier
+TextModifierV2 is much more readable than TextModifier and is coded better.
+In TextModifierV2 I used the map function and generators.
+Even though TextModifier is 4 lines shorter,TextModifierV2 is probably also faster(at least for big files).
