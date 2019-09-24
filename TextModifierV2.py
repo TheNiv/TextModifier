@@ -44,13 +44,13 @@ def create_new_line(lines):#yields a line each time
 
 def main():
     try:
-        if stat('Text.txt').st_size==0:
+        if stat('Chat.txt').st_size==0:
             raise EmptyFileError
     except EmptyFileError:
         print("The file is empty.")
     
     
-    with open('Text.txt','r') as text:
+    with open('NewChat.txt','r') as text:
         with open('NewChat.txt','w') as newText:
             lines=(removeWhitespace(line) for line in text)
             for line in lines:
